@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\DepartamentoController;
+use App\Http\Controllers\EmpleadoController;
+use App\Http\Controllers\NivelEducacionController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +20,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::resource('departamentos', DepartamentoController::class);
+Route::resource('empleados', EmpleadoController::class);
+Route::resource('niveles-educacion', NivelEducacionController::class);
+
+// Ruta para el reporte solicitado
+Route::get('/reporte', [EmpleadoController::class, 'reporte'])->name('empleados.reporte');
