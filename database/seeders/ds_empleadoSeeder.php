@@ -19,6 +19,11 @@ class ds_empleadoSeeder extends Seeder
             ['nombre' => 'Luis', 'apellido' => 'Martínez', 'id_departamento' => 3, 'salario' => 5000, 'id_niveleducacion' => 4],
             ['nombre' => 'María', 'apellido' => 'Rodríguez', 'id_departamento' => 4, 'salario' => 4000, 'id_niveleducacion' => 2],
             ['nombre' => 'Carlos', 'apellido' => 'Jiménez', 'id_departamento' => 5, 'salario' => 300000, 'id_niveleducacion' => 1],
+            ['nombre' => 'Samuel', 'apellido' => 'Obando', 'id_departamento' => 2, 'salario' => 300000, 'id_niveleducacion' => 2],
+            ['nombre' => 'cristian', 'apellido' => 'cristian', 'id_departamento' => 5, 'salario' => 300000, 'id_niveleducacion' => 2],
+            ['nombre' => 'Pepitos', 'apellido' => 'Perez', 'id_departamento' => 3, 'salario' => 320000, 'id_niveleducacion' => 4],
+            ['nombre' => 'Cristiano', 'apellido' => 'Ronaldo', 'id_departamento' => 4, 'salario' => 330000, 'id_niveleducacion' => 3],
+            ['nombre' => 'Alejandro', 'apellido' => 'martinez', 'id_departamento' => 1, 'salario' => 304000, 'id_niveleducacion' => 5],
         ]);
     }
 }
