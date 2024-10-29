@@ -1,0 +1,19 @@
+Obtener utilizando una consulta SQL el listado de personas y su nivel de educación para las
+personas que trabajan en departamentos en donde la suma de los sueldos de los empleados
+que los integran es superior a 250000.
+
+IMPORTANTE: En el listado mostrar el apellido de la persona (apellido) y el nivel de
+educacional (descripcion de la tabla da_niveleducacion). Mostrar los resultados ordenados por
+apellido.
+
+SELECT e.apellido,ne.descripcion AS nivel_educacion
+FROM ds_empleado e
+JOIN ds_departamento d ON e.id_departamento = d.id
+JOIN ds_niveleducacion ne ON e.id_niveleducacion = ne.id
+WHERE e.id_departamento IN (
+      SELECT id_departamento
+        FROM ds_empleado
+        GROUP BY id_departamento
+        HAVING SUM(salario) > 250000
+    )
+ORDER BY e.apellido;
