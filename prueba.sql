@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `ds_departamento` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL ,
   `nombre_departamento` varchar(200) NOT NULL,
   `ciudad_departamento` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -40,7 +40,7 @@ CREATE TABLE `ds_departamento` (
 --
 
 CREATE TABLE `ds_empleado` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL ,
   `nombre` varchar(200) NOT NULL,
   `apellido` varchar(200) NOT NULL,
   `id_departamento` int(11) NOT NULL,
@@ -55,7 +55,7 @@ CREATE TABLE `ds_empleado` (
 --
 
 CREATE TABLE `ds_niveleducacion` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL ,
   `descripcion` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -69,17 +69,27 @@ CREATE TABLE `ds_niveleducacion` (
 ALTER TABLE `ds_departamento`
   ADD PRIMARY KEY (`id`);
 
+ALTER TABLE `ds_departamento`
+  MODIFY COLUMN `id`  int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- Indices de la tabla `ds_empleado`
 --
 ALTER TABLE `ds_empleado`
   ADD PRIMARY KEY (`id`);
 
+ALTER TABLE `ds_empleado`
+  MODIFY COLUMN `id`  int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- Indices de la tabla `ds_niveleducacion`
 --
 ALTER TABLE `ds_niveleducacion`
   ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `ds_niveleducacion`
+  MODIFY COLUMN `id`  int(11) NOT NULL AUTO_INCREMENT;
+
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
