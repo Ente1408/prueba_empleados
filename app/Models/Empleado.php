@@ -26,4 +26,9 @@ class Empleado extends Model
     {
         return $this->belongsTo(NivelEducacion::class, 'id_niveleducacion');
     }
+    // Función para calcular el salario
+    public function calcularSalario($horasTrabajadas, $tarifaPorHora)
+    {
+        return $horasTrabajadas * $tarifaPorHora;
+    }
 }
